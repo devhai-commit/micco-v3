@@ -32,11 +32,11 @@
   }
 
   .gradient-primary {
-    @apply bg-gradient-to-r from-primary-600 via-secondary-500 to-secondary-600;
+    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500;
   }
 
   .gradient-accent {
-    @apply bg-gradient-to-r from-accent-400 to-accent-600;
+    @apply bg-gradient-to-r from-secondary-400 to-secondary-600;
   }
 
   .card-hover {
@@ -70,7 +70,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-secondary-500 to-accent-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500;
   }
 
   .scrollbar-thin {
@@ -266,14 +266,14 @@
 }
 
 .tiptap blockquote {
-  border-left: 3px solid #6366f1;
+  border-left: 3px solid #48A111;
   padding-left: 1rem;
   color: #6b7280;
   font-style: italic;
 }
 
 .dark .tiptap blockquote {
-  border-left-color: #818cf8;
+  border-left-color: #F2B50B;
   color: #9ca3af;
 }
 

@@ -6,13 +6,16 @@ Supports: gpt-4o, gpt-4o-mini, gpt-4.1, o1, o3-mini, text-embedding-3-small/larg
 """
 from __future__ import annotations
 
+import json
 import logging
+import re
 from typing import AsyncGenerator, Optional
 
 import numpy as np
 
 from app.services.llm.base import EmbeddingProvider, LLMProvider
 from app.services.llm.types import LLMMessage, LLMResult, StreamChunk
+from app.services.llm.rate_limiter import get_rate_limiter, make_retry
 
 logger = logging.getLogger(__name__)
 
@@ -34,14 +37,36 @@ def _to_openai_messages(
     messages: list[LLMMessage],
     system_prompt: Optional[str] = None,
 ) -> list[dict]:
-    """Convert LLMMessage list → OpenAI message dicts."""
+    """Convert LLMMessage list → OpenAI message dicts.
+
+    Handles:
+    - Standard user/assistant messages
+    - Vision messages (image_url)
+    - Native tool call results (role="tool", tool_call_id)
+    - Assistant messages with tool_calls (for multi-turn function calling)
+    """
     result: list[dict] = []
 
     if system_prompt:
         result.append({"role": "system", "content": system_prompt})
 
     for msg in messages:
-        if msg.images:
+        # Tool result message (role="tool")
+        if msg.role == "tool" and msg.tool_call_id:
+            result.append({
+                "role": "tool",
+                "tool_call_id": msg.tool_call_id,
+                "content": msg.content,
+            })
+        # Assistant message that made a tool call
+        elif msg.role == "assistant" and msg.tool_calls:
+            result.append({
+                "role": "assistant",
+                "content": msg.content or None,
+                "tool_calls": msg.tool_calls,
+            })
+        # Vision message
+        elif msg.images:
             import base64
             content = []
             if msg.content:
@@ -68,11 +93,13 @@ class OpenAILLMProvider(LLMProvider):
         model: str = "gpt-4o-mini",
         base_url: Optional[str] = None,
         max_output_tokens: int = 8192,
+        max_retries: int = 5,
     ):
         self._api_key = api_key
         self._model = model
         self._base_url = base_url
         self._max_output_tokens = max_output_tokens
+        self._max_retries = max_retries
 
     def _get_client(self):
         from openai import OpenAI
@@ -118,14 +145,18 @@ class OpenAILLMProvider(LLMProvider):
     ) -> str | LLMResult:
         client = self._get_async_client()
         oai_msgs = _to_openai_messages(messages, system_prompt)
+        limiter = get_rate_limiter()
 
         try:
-            response = await client.chat.completions.create(
-                model=self._model,
-                messages=oai_msgs,
-                temperature=temperature,
-                max_tokens=min(max_tokens, self._max_output_tokens),
-            )
+            async for attempt in make_retry(self._max_retries):
+                with attempt:
+                    async with limiter:
+                        response = await client.chat.completions.create(
+                            model=self._model,
+                            messages=oai_msgs,
+                            temperature=temperature,
+                            max_tokens=min(max_tokens, self._max_output_tokens),
+                        )
             content = response.choices[0].message.content or ""
             return content
         except Exception as e:
@@ -156,28 +187,60 @@ class OpenAILLMProvider(LLMProvider):
             kwargs["tools"] = tools
             kwargs["tool_choice"] = "auto"
 
-        try:
-            stream = await client.chat.completions.create(**kwargs)
-            async for chunk in stream:
-                delta = chunk.choices[0].delta if chunk.choices else None
-                if delta is None:
-                    continue
+        limiter = get_rate_limiter()
 
-                # Tool call chunks
+        # Buffer native tool calls across chunks — OpenAI streams them incrementally
+        # (name in chunk 1, arguments split across chunk 2..N), unlike Gemini which
+        # delivers a complete function_call part in a single chunk.
+        # Structure: {index: {"id": str, "name": str, "arguments": str}}
+        tool_call_buffers: dict[int, dict] = {}
+
+        try:
+            # Rate limit + retry on initial connection only
+            async for attempt in make_retry(self._max_retries):
+                with attempt:
+                    async with limiter:
+                        stream = await client.chat.completions.create(**kwargs)
+            async for chunk in stream:
+                if not chunk.choices:
+                    continue
+                choice = chunk.choices[0]
+                delta = choice.delta
+
+                # Accumulate tool call fragments (same as Gemini's accumulated_parts)
                 if delta.tool_calls:
                     for tc in delta.tool_calls:
+                        idx = tc.index
+                        if idx not in tool_call_buffers:
+                            tool_call_buffers[idx] = {"id": "", "name": "", "arguments": ""}
+                        if tc.id:
+                            tool_call_buffers[idx]["id"] = tc.id
                         if tc.function:
-                            yield StreamChunk(
-                                type="function_call",
-                                function_call={
-                                    "name": tc.function.name or "",
-                                    "args": tc.function.arguments or "",
-                                },
-                            )
+                            if tc.function.name:
+                                tool_call_buffers[idx]["name"] += tc.function.name
+                            if tc.function.arguments:
+                                tool_call_buffers[idx]["arguments"] += tc.function.arguments
                     continue
 
                 if delta.content:
                     yield StreamChunk(type="text", text=delta.content)
+
+            # Stream finished — yield complete tool calls (mirrors Gemini's pattern)
+            for idx in sorted(tool_call_buffers.keys()):
+                buf = tool_call_buffers[idx]
+                try:
+                    args = json.loads(buf["arguments"]) if buf["arguments"] else {}
+                except json.JSONDecodeError:
+                    logger.warning("Failed to parse OpenAI tool call arguments: %s", buf["arguments"])
+                    args = {}
+                yield StreamChunk(
+                    type="function_call",
+                    function_call={
+                        "name": buf["name"],
+                        "args": args,
+                        "id": buf["id"],  # Needed to build tool result message
+                    },
+                )
 
         except Exception as e:
             logger.error(f"OpenAI streaming failed: {e}", exc_info=True)
@@ -226,9 +289,15 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
         from openai import AsyncOpenAI
         client = AsyncOpenAI(api_key=self._api_key, base_url=self._base_url)
         clean = [t.strip() or "[empty]" for t in texts]
+        limiter = get_rate_limiter()
 
         try:
-            response = await client.embeddings.create(model=self._model, input=clean)
+            async for attempt in make_retry():
+                with attempt:
+                    async with limiter:
+                        response = await client.embeddings.create(
+                            model=self._model, input=clean
+                        )
             vectors = [item.embedding for item in response.data]
             return np.array(vectors, dtype=np.float32)
         except Exception as e:

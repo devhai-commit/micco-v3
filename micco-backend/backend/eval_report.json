@@ -1,0 +1,1763 @@
+[
+  {
+    "mode": "vector_only",
+    "k": 5,
+    "num_cases": 64,
+    "mean_precision": 0.1469,
+    "mean_recall": 0.7344,
+    "mrr": 0.5224,
+    "avg_latency_ms": 1905.9,
+    "per_case": [
+      {
+        "question": "Giá trị đại lượng *P* là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3176.6
+      },
+      {
+        "question": "Hệ số độ nhạy của đại lượng *A**0s* có giá trị là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1824.7
+      },
+      {
+        "question": "Những phép kiểm định nào được thực hiện theo điều 5.1 của QTKĐ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_20_chunk_2",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 2150.3
+      },
+      {
+        "question": "Kiểm tra khả năng làm việc của bơm phụ và van an toàn thuộc chế độ kiểm định nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_19_chunk_8",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2150.2
+      },
+      {
+        "question": "Áp kế hiện số chuẩn có phạm vi đo như thế nào so với áp suất chỉnh đặt của van cần kiểm định?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_18_chunk_17",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 10331.4
+      },
+      {
+        "question": "Độ tăng áp suất khi tạo chân không của thiết bị tạo áp suất không được vượt quá bao nhiêu phần trăm trong 5 phút?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_19_chunk_11",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 924.7
+      },
+      {
+        "question": "Độ chính xác của AKKĐ trong chu trình kiểm định A là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_22_chunk_25",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2039.8
+      },
+      {
+        "question": "Số lần tăng giảm áp suất trước khi đo trong chu trình kiểm định B là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_23_chunk_18",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 923.5
+      },
+      {
+        "question": "Chu kỳ kiểm định của Bình phân ly là bao lâu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1536.4
+      },
+      {
+        "question": "Điều gì xảy ra nếu Bình phân ly không đạt các chỉ tiêu kỹ thuật sau khi kiểm định?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1638.0
+      },
+      {
+        "question": "Làm thế nào để kiểm tra khả năng làm việc của bơm nén chính đối với bàn tạo áp một cấp không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_9",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1020.9
+      },
+      {
+        "question": "Quy trình kiểm tra bơm nén chính khác nhau như thế nào giữa bàn tạo áp có và không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_8",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 816.6
+      },
+      {
+        "question": "Quy trình QTKĐ 1.062:2021 thay thế cho quy trình nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_20_chunk_0",
+        "hit": true,
+        "rank": 4,
+        "latency_ms": 1029.8
+      },
+      {
+        "question": "Cơ quan nào biên soạn quy trình QTKĐ 1.062:2021?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_23_chunk_0",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 1223.8
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại thiết bị nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_19_chunk_1",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2252.5
+      },
+      {
+        "question": "Phạm vi đo của áp kế chuẩn và chân không kế chuẩn là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_23_chunk_17",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1842.2
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm kiểu chỉ thị tương tự có thể được lấy bằng bao nhiêu giá trị áp suất giữa hai vạch chia liền kề?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2257.7
+      },
+      {
+        "question": "Dạng phân bố của cơ cấu chỉ thị kim và cơ cấu chỉ thị vạch dạng thước là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1937.5
+      },
+      {
+        "question": "Nhiệt độ môi trường trong điều kiện hiệu chuẩn là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2252.3
+      },
+      {
+        "question": "Độ ẩm môi trường trong điều kiện hiệu chuẩn là bao nhiêu phần trăm RH?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 1838.6
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_22_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2147.7
+      },
+      {
+        "question": "Phạm vi đo của nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn là gì?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_22_chunk_53",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1235.5
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_20_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 1333.7
+      },
+      {
+        "question": "Độ ẩm tương đối cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 1113.5
+      },
+      {
+        "question": "Phạm vi đo của barômét là bao nhiêu mbar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 1641.6
+      },
+      {
+        "question": "Độ chính xác của thước đo là bao nhiêu mm?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_20_chunk_5",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 1843.9
+      },
+      {
+        "question": "Quy trình kiểm tra độ tụt áp của bình phân ly bao gồm những bước nào?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1838.1
+      },
+      {
+        "question": "Làm thế nào để đảm bảo cách ly hoàn toàn hệ thống tạo áp suất và vị trí lắp đặt bình phân ly?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 816.6
+      },
+      {
+        "question": "Kết quả kiểm tra áp suất có đạt yêu cầu kỹ thuật đo lường không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_18_chunk_21",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 926.2
+      },
+      {
+        "question": "Sau 5 phút, áp suất đọc trên áp kế chuẩn có thay đổi không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1635.0
+      },
+      {
+        "question": "Gia tốc trọng trường được ký hiệu bằng ký tự nào trong đoạn văn?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_23_chunk_39",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1021.9
+      },
+      {
+        "question": "Nhiệt độ tiêu chuẩn được ghi nhận là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1946.9
+      },
+      {
+        "question": "Độ ẩm của môi trường trong đoạn văn là bao nhiêu phần trăm?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2455.8
+      },
+      {
+        "question": "Áp suất được ghi nhận trong đoạn văn là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_22_chunk_73",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1326.2
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm chỉ thị có dao động thăng giáng bất thường được tính như thế nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_23_chunk_42",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1137.7
+      },
+      {
+        "question": "Độ không đảm bảo đo do độ lệch “0” cần được xác định trong những trường hợp nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_18_chunk_7",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2038.8
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_20_chunk_6",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2760.3
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong quá trình kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2666.9
+      },
+      {
+        "question": "Khi nào cần sử dụng kết hợp chuẩn đo lường đo áp suất dư và thiết bị đo áp suất khí quyển?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2974.8
+      },
+      {
+        "question": "Làm thế nào để tạo áp suất nền nhỏ hơn áp suất khí quyển trong quá trình đo áp suất chênh áp?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1426.2
+      },
+      {
+        "question": "Nhiệt độ môi trường cần duy trì ở mức nào khi tiến hành kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 1735.9
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong phòng kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_20_chunk_6",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2564.4
+      },
+      {
+        "question": "Phạm vi đo của ẩm kế là bao nhiêu phần trăm độ ẩm tương đối?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_22_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2041.2
+      },
+      {
+        "question": "Sai số cho phép của phương tiện đo áp suất khí quyển là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_23_chunk_6",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 1549.8
+      },
+      {
+        "question": "Độ tụt áp suất trong bình phân ly sau 5 phút không được vượt quá bao nhiêu phần trăm giới hạn áp suất làm việc tối đa?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1726.8
+      },
+      {
+        "question": "Hiệu giá trị trung bình cộng của 2 lần đo và áp suất kiểm tra được gọi là gì?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1636.9
+      },
+      {
+        "question": "Điều gì xảy ra nếu một nội dung kiểm tra không đạt yêu cầu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 1329.3
+      },
+      {
+        "question": "Khi nào thì không tiến hành kiểm tra các bước tiếp theo?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 4,
+        "latency_ms": 1945.1
+      },
+      {
+        "question": "Hệ số nhiệt của píttông và xylanh là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_53",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1744.5
+      },
+      {
+        "question": "Nhiệt độ của píttông trong điều kiện kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_53",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1019.3
+      },
+      {
+        "question": "Phạm vi đo của bộ áp kế chuẩn kiểu chỉ thị hiện số là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 820.0
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_22_chunk_11",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2153.2
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại van an toàn nào?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1634.5
+      },
+      {
+        "question": "Van an toàn trong quy trình này có phạm vi làm việc tối đa là bao nhiêu bar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1550.5
+      },
+      {
+        "question": "Nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn có phạm vi đo tối đa là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_22_chunk_53",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3468.3
+      },
+      {
+        "question": "Sau khi chịu tải ở giới hạn đo trên trong 10 phút, độ tụt áp của hệ thống tạo áp suất không được vượt quá bao nhiêu phần trăm trong vòng 5 phút?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_21_chunk_15",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1748.1
+      },
+      {
+        "question": "Độ lệch cho phép khi lắp đặt AKKĐ là bao nhiêu đối với áp kế chuẩn và chân không kế chuẩn kiểu chất lỏng?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_23_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2051.6
+      },
+      {
+        "question": "Công thức tính bù áp suất khi có chênh lệch chiều cao cột chất lỏng là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_22_chunk_29",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 808.5
+      },
+      {
+        "question": "Phương pháp kiểm định được sử dụng trong biên bản kiểm định là gì?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_21_chunk_3",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 713.0
+      },
+      {
+        "question": "Điều kiện nhiệt độ và độ ẩm được quy định trong biên bản kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 1552.2
+      },
+      {
+        "question": "Điều kiện kiểm định bao gồm những yếu tố nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_20_chunk_2",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 4588.1
+      },
+      {
+        "question": "Có những bước kiểm tra nào trong quá trình kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_20_chunk_2",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2770.2
+      },
+      {
+        "question": "Áp kế pít tông trong biên bản kiểm định này có phạm vi đo từ bao nhiêu đến bao nhiêu bar?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 1224.9
+      },
+      {
+        "question": "Phương pháp kiểm định áp kế pít tông được sử dụng là gì?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_22_chunk_2",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2147.6
+      }
+    ]
+  },
+  {
+    "mode": "vector_rerank (bge-reranker-v2-m3)",
+    "k": 5,
+    "num_cases": 64,
+    "mean_precision": 0.175,
+    "mean_recall": 0.875,
+    "mrr": 0.706,
+    "avg_latency_ms": 3413.9,
+    "per_case": [
+      {
+        "question": "Giá trị đại lượng *P* là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 18526.6
+      },
+      {
+        "question": "Hệ số độ nhạy của đại lượng *A**0s* có giá trị là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3438.0
+      },
+      {
+        "question": "Những phép kiểm định nào được thực hiện theo điều 5.1 của QTKĐ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_19_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 9021.7
+      },
+      {
+        "question": "Kiểm tra khả năng làm việc của bơm phụ và van an toàn thuộc chế độ kiểm định nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_19_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2772.3
+      },
+      {
+        "question": "Áp kế hiện số chuẩn có phạm vi đo như thế nào so với áp suất chỉnh đặt của van cần kiểm định?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_18_chunk_6",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2747.1
+      },
+      {
+        "question": "Độ tăng áp suất khi tạo chân không của thiết bị tạo áp suất không được vượt quá bao nhiêu phần trăm trong 5 phút?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_19_chunk_11",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2083.8
+      },
+      {
+        "question": "Độ chính xác của AKKĐ trong chu trình kiểm định A là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_23_chunk_18",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2338.2
+      },
+      {
+        "question": "Số lần tăng giảm áp suất trước khi đo trong chu trình kiểm định B là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_23_chunk_18",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2470.7
+      },
+      {
+        "question": "Chu kỳ kiểm định của Bình phân ly là bao lâu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3423.6
+      },
+      {
+        "question": "Điều gì xảy ra nếu Bình phân ly không đạt các chỉ tiêu kỹ thuật sau khi kiểm định?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2775.9
+      },
+      {
+        "question": "Làm thế nào để kiểm tra khả năng làm việc của bơm nén chính đối với bàn tạo áp một cấp không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_9",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 4487.0
+      },
+      {
+        "question": "Quy trình kiểm tra bơm nén chính khác nhau như thế nào giữa bàn tạo áp có và không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_9",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3977.3
+      },
+      {
+        "question": "Quy trình QTKĐ 1.062:2021 thay thế cho quy trình nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_19_chunk_0",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2846.9
+      },
+      {
+        "question": "Cơ quan nào biên soạn quy trình QTKĐ 1.062:2021?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_19_chunk_0",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2843.3
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại thiết bị nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_21_chunk_2",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3252.1
+      },
+      {
+        "question": "Phạm vi đo của áp kế chuẩn và chân không kế chuẩn là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_23_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2066.9
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm kiểu chỉ thị tương tự có thể được lấy bằng bao nhiêu giá trị áp suất giữa hai vạch chia liền kề?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3599.0
+      },
+      {
+        "question": "Dạng phân bố của cơ cấu chỉ thị kim và cơ cấu chỉ thị vạch dạng thước là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3848.3
+      },
+      {
+        "question": "Nhiệt độ môi trường trong điều kiện hiệu chuẩn là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 2716.0
+      },
+      {
+        "question": "Độ ẩm môi trường trong điều kiện hiệu chuẩn là bao nhiêu phần trăm RH?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2967.2
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3240.9
+      },
+      {
+        "question": "Phạm vi đo của nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn là gì?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_22_chunk_52",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 2212.7
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 2908.5
+      },
+      {
+        "question": "Độ ẩm tương đối cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3844.4
+      },
+      {
+        "question": "Phạm vi đo của barômét là bao nhiêu mbar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_18_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2978.2
+      },
+      {
+        "question": "Độ chính xác của thước đo là bao nhiêu mm?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_20_chunk_5",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2414.9
+      },
+      {
+        "question": "Quy trình kiểm tra độ tụt áp của bình phân ly bao gồm những bước nào?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2637.7
+      },
+      {
+        "question": "Làm thế nào để đảm bảo cách ly hoàn toàn hệ thống tạo áp suất và vị trí lắp đặt bình phân ly?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3143.6
+      },
+      {
+        "question": "Kết quả kiểm tra áp suất có đạt yêu cầu kỹ thuật đo lường không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2477.6
+      },
+      {
+        "question": "Sau 5 phút, áp suất đọc trên áp kế chuẩn có thay đổi không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3864.6
+      },
+      {
+        "question": "Gia tốc trọng trường được ký hiệu bằng ký tự nào trong đoạn văn?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_22_chunk_49",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3851.8
+      },
+      {
+        "question": "Nhiệt độ tiêu chuẩn được ghi nhận là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2297.7
+      },
+      {
+        "question": "Độ ẩm của môi trường trong đoạn văn là bao nhiêu phần trăm?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3922.8
+      },
+      {
+        "question": "Áp suất được ghi nhận trong đoạn văn là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_22_chunk_57",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2224.0
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm chỉ thị có dao động thăng giáng bất thường được tính như thế nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_23_chunk_42",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2895.9
+      },
+      {
+        "question": "Độ không đảm bảo đo do độ lệch “0” cần được xác định trong những trường hợp nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_23_chunk_42",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2715.7
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3188.6
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong quá trình kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 3655.1
+      },
+      {
+        "question": "Khi nào cần sử dụng kết hợp chuẩn đo lường đo áp suất dư và thiết bị đo áp suất khí quyển?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2169.8
+      },
+      {
+        "question": "Làm thế nào để tạo áp suất nền nhỏ hơn áp suất khí quyển trong quá trình đo áp suất chênh áp?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3039.4
+      },
+      {
+        "question": "Nhiệt độ môi trường cần duy trì ở mức nào khi tiến hành kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_22_chunk_13",
+        "hit": true,
+        "rank": 4,
+        "latency_ms": 2522.9
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong phòng kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_23_chunk_8",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 4742.8
+      },
+      {
+        "question": "Phạm vi đo của ẩm kế là bao nhiêu phần trăm độ ẩm tương đối?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_22_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3697.9
+      },
+      {
+        "question": "Sai số cho phép của phương tiện đo áp suất khí quyển là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_23_chunk_6",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2737.1
+      },
+      {
+        "question": "Độ tụt áp suất trong bình phân ly sau 5 phút không được vượt quá bao nhiêu phần trăm giới hạn áp suất làm việc tối đa?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2918.9
+      },
+      {
+        "question": "Hiệu giá trị trung bình cộng của 2 lần đo và áp suất kiểm tra được gọi là gì?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3999.2
+      },
+      {
+        "question": "Điều gì xảy ra nếu một nội dung kiểm tra không đạt yêu cầu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 3896.3
+      },
+      {
+        "question": "Khi nào thì không tiến hành kiểm tra các bước tiếp theo?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 3962.1
+      },
+      {
+        "question": "Hệ số nhiệt của píttông và xylanh là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_52",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2759.4
+      },
+      {
+        "question": "Nhiệt độ của píttông trong điều kiện kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_13",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2659.9
+      },
+      {
+        "question": "Phạm vi đo của bộ áp kế chuẩn kiểu chỉ thị hiện số là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3331.7
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3302.2
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại van an toàn nào?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 1905.4
+      },
+      {
+        "question": "Van an toàn trong quy trình này có phạm vi làm việc tối đa là bao nhiêu bar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3387.8
+      },
+      {
+        "question": "Nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn có phạm vi đo tối đa là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_23_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2459.0
+      },
+      {
+        "question": "Sau khi chịu tải ở giới hạn đo trên trong 10 phút, độ tụt áp của hệ thống tạo áp suất không được vượt quá bao nhiêu phần trăm trong vòng 5 phút?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_23_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3298.2
+      },
+      {
+        "question": "Độ lệch cho phép khi lắp đặt AKKĐ là bao nhiêu đối với áp kế chuẩn và chân không kế chuẩn kiểu chất lỏng?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_23_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2646.9
+      },
+      {
+        "question": "Công thức tính bù áp suất khi có chênh lệch chiều cao cột chất lỏng là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_23_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2751.7
+      },
+      {
+        "question": "Phương pháp kiểm định được sử dụng trong biên bản kiểm định là gì?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_23_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3093.7
+      },
+      {
+        "question": "Điều kiện nhiệt độ và độ ẩm được quy định trong biên bản kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3645.1
+      },
+      {
+        "question": "Điều kiện kiểm định bao gồm những yếu tố nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3414.5
+      },
+      {
+        "question": "Có những bước kiểm tra nào trong quá trình kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_18_chunk_10",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3169.7
+      },
+      {
+        "question": "Áp kế pít tông trong biên bản kiểm định này có phạm vi đo từ bao nhiêu đến bao nhiêu bar?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_21_chunk_2",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3571.5
+      },
+      {
+        "question": "Phương pháp kiểm định áp kế pít tông được sử dụng là gì?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_21_chunk_19",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 2726.6
+      }
+    ]
+  },
+  {
+    "mode": "hybrid_nexusrag",
+    "k": 5,
+    "num_cases": 64,
+    "mean_precision": 0.175,
+    "mean_recall": 0.875,
+    "mrr": 0.706,
+    "avg_latency_ms": 4231.5,
+    "per_case": [
+      {
+        "question": "Giá trị đại lượng *P* là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 70848.4
+      },
+      {
+        "question": "Hệ số độ nhạy của đại lượng *A**0s* có giá trị là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_66",
+        "retrieved_top1": "doc_22_chunk_66",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3478.9
+      },
+      {
+        "question": "Những phép kiểm định nào được thực hiện theo điều 5.1 của QTKĐ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_19_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2876.7
+      },
+      {
+        "question": "Kiểm tra khả năng làm việc của bơm phụ và van an toàn thuộc chế độ kiểm định nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_2",
+        "retrieved_top1": "doc_19_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2670.0
+      },
+      {
+        "question": "Áp kế hiện số chuẩn có phạm vi đo như thế nào so với áp suất chỉnh đặt của van cần kiểm định?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_18_chunk_6",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3065.6
+      },
+      {
+        "question": "Độ tăng áp suất khi tạo chân không của thiết bị tạo áp suất không được vượt quá bao nhiêu phần trăm trong 5 phút?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_6",
+        "retrieved_top1": "doc_19_chunk_11",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3238.4
+      },
+      {
+        "question": "Độ chính xác của AKKĐ trong chu trình kiểm định A là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_23_chunk_18",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3444.3
+      },
+      {
+        "question": "Số lần tăng giảm áp suất trước khi đo trong chu trình kiểm định B là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_18",
+        "retrieved_top1": "doc_23_chunk_18",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3397.4
+      },
+      {
+        "question": "Chu kỳ kiểm định của Bình phân ly là bao lâu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2198.0
+      },
+      {
+        "question": "Điều gì xảy ra nếu Bình phân ly không đạt các chỉ tiêu kỹ thuật sau khi kiểm định?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_13",
+        "retrieved_top1": "doc_20_chunk_13",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3181.3
+      },
+      {
+        "question": "Làm thế nào để kiểm tra khả năng làm việc của bơm nén chính đối với bàn tạo áp một cấp không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_9",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 4077.0
+      },
+      {
+        "question": "Quy trình kiểm tra bơm nén chính khác nhau như thế nào giữa bàn tạo áp có và không có bơm nén phụ?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_9",
+        "retrieved_top1": "doc_19_chunk_9",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3781.9
+      },
+      {
+        "question": "Quy trình QTKĐ 1.062:2021 thay thế cho quy trình nào?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_19_chunk_0",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2318.0
+      },
+      {
+        "question": "Cơ quan nào biên soạn quy trình QTKĐ 1.062:2021?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_0",
+        "retrieved_top1": "doc_19_chunk_0",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3685.2
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại thiết bị nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_21_chunk_2",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 3156.8
+      },
+      {
+        "question": "Phạm vi đo của áp kế chuẩn và chân không kế chuẩn là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_2",
+        "retrieved_top1": "doc_23_chunk_2",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2579.3
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm kiểu chỉ thị tương tự có thể được lấy bằng bao nhiêu giá trị áp suất giữa hai vạch chia liền kề?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2983.7
+      },
+      {
+        "question": "Dạng phân bố của cơ cấu chỉ thị kim và cơ cấu chỉ thị vạch dạng thước là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_41",
+        "retrieved_top1": "doc_23_chunk_41",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2441.9
+      },
+      {
+        "question": "Nhiệt độ môi trường trong điều kiện hiệu chuẩn là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 3412.6
+      },
+      {
+        "question": "Độ ẩm môi trường trong điều kiện hiệu chuẩn là bao nhiêu phần trăm RH?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_54",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2962.5
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 4261.6
+      },
+      {
+        "question": "Phạm vi đo của nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn là gì?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_11",
+        "retrieved_top1": "doc_22_chunk_52",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 4142.9
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 3924.4
+      },
+      {
+        "question": "Độ ẩm tương đối cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_8",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 4023.5
+      },
+      {
+        "question": "Phạm vi đo của barômét là bao nhiêu mbar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_18_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 8092.1
+      },
+      {
+        "question": "Độ chính xác của thước đo là bao nhiêu mm?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_7",
+        "retrieved_top1": "doc_20_chunk_5",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2922.6
+      },
+      {
+        "question": "Quy trình kiểm tra độ tụt áp của bình phân ly bao gồm những bước nào?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2639.2
+      },
+      {
+        "question": "Làm thế nào để đảm bảo cách ly hoàn toàn hệ thống tạo áp suất và vị trí lắp đặt bình phân ly?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_11",
+        "retrieved_top1": "doc_20_chunk_11",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2719.1
+      },
+      {
+        "question": "Kết quả kiểm tra áp suất có đạt yêu cầu kỹ thuật đo lường không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3493.3
+      },
+      {
+        "question": "Sau 5 phút, áp suất đọc trên áp kế chuẩn có thay đổi không?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_15",
+        "retrieved_top1": "doc_20_chunk_15",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2888.4
+      },
+      {
+        "question": "Gia tốc trọng trường được ký hiệu bằng ký tự nào trong đoạn văn?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_22_chunk_49",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2357.2
+      },
+      {
+        "question": "Nhiệt độ tiêu chuẩn được ghi nhận là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_32",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2802.0
+      },
+      {
+        "question": "Độ ẩm của môi trường trong đoạn văn là bao nhiêu phần trăm?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_22_chunk_56",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2778.4
+      },
+      {
+        "question": "Áp suất được ghi nhận trong đoạn văn là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_57",
+        "retrieved_top1": "doc_22_chunk_57",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2642.3
+      },
+      {
+        "question": "Độ phân giải của áp kế kiểm chỉ thị có dao động thăng giáng bất thường được tính như thế nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_23_chunk_42",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2175.6
+      },
+      {
+        "question": "Độ không đảm bảo đo do độ lệch “0” cần được xác định trong những trường hợp nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_42",
+        "retrieved_top1": "doc_23_chunk_42",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2505.8
+      },
+      {
+        "question": "Nhiệt độ môi trường cần thiết để tiến hành kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2671.8
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong quá trình kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_6",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 10163.5
+      },
+      {
+        "question": "Khi nào cần sử dụng kết hợp chuẩn đo lường đo áp suất dư và thiết bị đo áp suất khí quyển?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3626.1
+      },
+      {
+        "question": "Làm thế nào để tạo áp suất nền nhỏ hơn áp suất khí quyển trong quá trình đo áp suất chênh áp?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_12",
+        "retrieved_top1": "doc_23_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2220.0
+      },
+      {
+        "question": "Nhiệt độ môi trường cần duy trì ở mức nào khi tiến hành kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_22_chunk_13",
+        "hit": true,
+        "rank": 4,
+        "latency_ms": 2213.1
+      },
+      {
+        "question": "Độ ẩm tương đối tối đa cho phép trong phòng kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_8",
+        "retrieved_top1": "doc_23_chunk_8",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3201.0
+      },
+      {
+        "question": "Phạm vi đo của ẩm kế là bao nhiêu phần trăm độ ẩm tương đối?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_22_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2881.0
+      },
+      {
+        "question": "Sai số cho phép của phương tiện đo áp suất khí quyển là bao nhiêu hPa?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_10",
+        "retrieved_top1": "doc_23_chunk_6",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 4409.3
+      },
+      {
+        "question": "Độ tụt áp suất trong bình phân ly sau 5 phút không được vượt quá bao nhiêu phần trăm giới hạn áp suất làm việc tối đa?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3298.3
+      },
+      {
+        "question": "Hiệu giá trị trung bình cộng của 2 lần đo và áp suất kiểm tra được gọi là gì?",
+        "source_doc": "QTKD 1.063 2021 BPL.docx",
+        "relevant_id": "doc_20_chunk_12",
+        "retrieved_top1": "doc_20_chunk_12",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2823.8
+      },
+      {
+        "question": "Điều gì xảy ra nếu một nội dung kiểm tra không đạt yêu cầu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 1881.1
+      },
+      {
+        "question": "Khi nào thì không tiến hành kiểm tra các bước tiếp theo?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_17",
+        "retrieved_top1": "doc_19_chunk_6",
+        "hit": true,
+        "rank": 5,
+        "latency_ms": 1941.1
+      },
+      {
+        "question": "Hệ số nhiệt của píttông và xylanh là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_52",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2634.0
+      },
+      {
+        "question": "Nhiệt độ của píttông trong điều kiện kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.159 2021 ND FINAL.docx",
+        "relevant_id": "doc_22_chunk_53",
+        "retrieved_top1": "doc_22_chunk_13",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2147.1
+      },
+      {
+        "question": "Phạm vi đo của bộ áp kế chuẩn kiểu chỉ thị hiện số là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3226.4
+      },
+      {
+        "question": "Sai số cho phép của đồng hồ bấm giây điện tử là bao nhiêu?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_7",
+        "retrieved_top1": "doc_21_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2366.8
+      },
+      {
+        "question": "Quy trình kỹ thuật này áp dụng cho những loại van an toàn nào?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2120.8
+      },
+      {
+        "question": "Van an toàn trong quy trình này có phạm vi làm việc tối đa là bao nhiêu bar?",
+        "source_doc": "QTKD 1.061 2021 ND V2.docx",
+        "relevant_id": "doc_18_chunk_1",
+        "retrieved_top1": "doc_18_chunk_1",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2265.7
+      },
+      {
+        "question": "Nhiệt kế đo nhiệt độ của píttông/xylanh của áp kế píttông chuẩn có phạm vi đo tối đa là bao nhiêu độ C?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_23_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3681.6
+      },
+      {
+        "question": "Sau khi chịu tải ở giới hạn đo trên trong 10 phút, độ tụt áp của hệ thống tạo áp suất không được vượt quá bao nhiêu phần trăm trong vòng 5 phút?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_7",
+        "retrieved_top1": "doc_23_chunk_7",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3093.7
+      },
+      {
+        "question": "Độ lệch cho phép khi lắp đặt AKKĐ là bao nhiêu đối với áp kế chuẩn và chân không kế chuẩn kiểu chất lỏng?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_23_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3350.4
+      },
+      {
+        "question": "Công thức tính bù áp suất khi có chênh lệch chiều cao cột chất lỏng là gì?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_10",
+        "retrieved_top1": "doc_23_chunk_10",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 3082.4
+      },
+      {
+        "question": "Phương pháp kiểm định được sử dụng trong biên bản kiểm định là gì?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_23_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2667.6
+      },
+      {
+        "question": "Điều kiện nhiệt độ và độ ẩm được quy định trong biên bản kiểm định là bao nhiêu?",
+        "source_doc": "QTKD 1.062 2021 ND.docx",
+        "relevant_id": "doc_19_chunk_13",
+        "retrieved_top1": "doc_21_chunk_9",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3032.2
+      },
+      {
+        "question": "Điều kiện kiểm định bao gồm những yếu tố nào?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_19_chunk_4",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 3102.3
+      },
+      {
+        "question": "Có những bước kiểm tra nào trong quá trình kiểm định?",
+        "source_doc": "QTKD 1.160 2021 ND FINAL.docx",
+        "relevant_id": "doc_23_chunk_25",
+        "retrieved_top1": "doc_18_chunk_10",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2665.2
+      },
+      {
+        "question": "Áp kế pít tông trong biên bản kiểm định này có phạm vi đo từ bao nhiêu đến bao nhiêu bar?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_21_chunk_2",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2754.3
+      },
+      {
+        "question": "Phương pháp kiểm định áp kế pít tông được sử dụng là gì?",
+        "source_doc": "QTKD 1.071 2022 FINAL.docx",
+        "relevant_id": "doc_21_chunk_23",
+        "retrieved_top1": "doc_21_chunk_19",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 3130.3
+      }
+    ]
+  }
+]

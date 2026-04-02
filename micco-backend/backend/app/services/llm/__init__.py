@@ -53,6 +53,7 @@ def get_llm_provider() -> LLMProvider:
             model=settings.OPENAI_MODEL,
             base_url=settings.OPENAI_BASE_URL or None,
             max_output_tokens=settings.LLM_MAX_OUTPUT_TOKENS,
+            max_retries=settings.OPENAI_MAX_RETRIES,
         )
 
     raise ValueError(f"Unknown LLM_PROVIDER: {provider!r}. Supported: gemini, ollama, openai")

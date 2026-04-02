@@ -30,6 +30,10 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = Field(default="")
     OPENAI_MODEL: str = Field(default="gpt-4o-mini")
     OPENAI_BASE_URL: str = Field(default="")  # override cho OpenAI-compatible endpoints
+    # Rate limiting
+    OPENAI_MAX_CONCURRENT: int = Field(default=5)    # max parallel in-flight requests
+    OPENAI_REQUESTS_PER_MINUTE: int = Field(default=60)  # RPM cap (sliding window)
+    OPENAI_MAX_RETRIES: int = Field(default=5)       # retry attempts on 429/timeout
 
     # Ollama
     OLLAMA_HOST: str = Field(default="http://localhost:11434")
@@ -89,7 +93,7 @@ class Settings(BaseSettings):
     NEXUSRAG_DEDUP_NEAR_THRESHOLD: float = 0.85     # Jaccard similarity cutoff
 
     # NexusRAG Retrieval Quality
-    NEXUSRAG_EMBEDDING_MODEL: str = "BAAI/bge-m3"
+    NEXUSRAG_EMBEDDING_MODEL: str = "text-embedding-3-small"
     NEXUSRAG_RERANKER_MODEL: str = "rerank-multilingual-v3.0"
     COHERE_API_KEY: str = Field(default="")
     NEXUSRAG_VECTOR_PREFETCH: int = 20

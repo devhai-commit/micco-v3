@@ -1,10 +1,9 @@
 """
 Embedding Service
 =================
-Generates vector embeddings using sentence-transformers.
+Generates vector embeddings using OpenAI text-embedding-3-small.
 
-Default model: BAAI/bge-m3 (1024-dim, multilingual, 100+ languages).
-Configurable via NEXUSRAG_EMBEDDING_MODEL in settings.
+Configurable via NEXUSRAG_EMBEDDING_MODEL + OPENAI_API_KEY in settings.
 """
 from __future__ import annotations
 
@@ -15,75 +14,64 @@ from app.core.config import settings
 
 logger = logging.getLogger(__name__)
 
+# Dimension lookup for OpenAI embedding models
+_KNOWN_DIMS: dict[str, int] = {
+    "text-embedding-3-small": 1536,
+    "text-embedding-3-large": 3072,
+    "text-embedding-ada-002": 1536,
+    # (cũ — local sentence-transformers, không còn dùng)
+    # "BAAI/bge-m3": 1024,
+    # "all-MiniLM-L6-v2": 384,
+    # "intfloat/multilingual-e5-large-instruct": 1024,
+}
+
 
 class EmbeddingService:
     """
-    Service for generating text embeddings.
-    Uses sentence-transformers for local embedding generation.
+    Service for generating text embeddings via OpenAI API.
+    Thin wrapper around OpenAIEmbeddingProvider để giữ interface cũ.
     """
-
-    # Dimension lookup for common models (used before model is loaded)
-    _KNOWN_DIMS = {
-        "BAAI/bge-m3": 1024,
-        "all-MiniLM-L6-v2": 384,
-        "all-mpnet-base-v2": 768,
-        "paraphrase-multilingual-MiniLM-L12-v2": 384,
-        "intfloat/multilingual-e5-large-instruct": 1024,
-    }
 
     def __init__(self, model_name: Optional[str] = None):
         self.model_name = model_name or settings.NEXUSRAG_EMBEDDING_MODEL
-        self._model = None
-
-    @property
-    def model(self):
-        """Lazy load the model."""
-        if self._model is None:
-            from sentence_transformers import SentenceTransformer
-            logger.info(f"Loading embedding model: {self.model_name}")
-            self._model = SentenceTransformer(self.model_name)
-            logger.info(
-                f"Embedding model loaded: {self.model_name} "
-                f"(dim={self._model.get_sentence_embedding_dimension()})"
-            )
-        return self._model
+        from app.services.llm.openai_provider import OpenAIEmbeddingProvider
+        self._provider = OpenAIEmbeddingProvider(
+            api_key=settings.OPENAI_API_KEY,
+            model=self.model_name,
+            base_url=settings.OPENAI_BASE_URL or None,
+        )
 
     @property
     def dimension(self) -> int:
         """Return the embedding dimension size."""
-        if self._model is not None:
-            return self._model.get_sentence_embedding_dimension()
-        return self._KNOWN_DIMS.get(self.model_name, 1024)
+        return self._provider.get_dimension()
 
     def embed_text(self, text: str) -> list[float]:
         """Generate embedding for a single text."""
         if not text.strip():
             raise ValueError("Cannot embed empty text")
-        embedding = self.model.encode(
-            text,
-            convert_to_numpy=True,
-            normalize_embeddings=True,
-        )
-        return embedding.tolist()
+        result = self._provider.embed_sync([text])
+        return result[0].tolist()
 
     def embed_texts(self, texts: Sequence[str]) -> list[list[float]]:
         """Generate embeddings for multiple texts in batch."""
-        if not texts:
-            return []
-        valid_texts = [t for t in texts if t.strip()]
-        if not valid_texts:
+        valid = [t for t in texts if t.strip()]
+        if not valid:
             raise ValueError("All texts are empty")
-        embeddings = self.model.encode(
-            valid_texts,
-            convert_to_numpy=True,
-            normalize_embeddings=True,
-            batch_size=32,
-        )
-        return embeddings.tolist()
+        result = self._provider.embed_sync(valid)
+        return result.tolist()
 
     def embed_query(self, query: str) -> list[float]:
         """Generate embedding for a search query."""
         return self.embed_text(query)
+
+    async def aembed_texts(self, texts: Sequence[str]) -> list[list[float]]:
+        """Async batch embedding — dùng trong async context để tránh blocking."""
+        valid = [t for t in texts if t.strip()]
+        if not valid:
+            raise ValueError("All texts are empty")
+        result = await self._provider.embed(valid)
+        return result.tolist()
 
 
 # Default service instance (singleton)

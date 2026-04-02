@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 # File extensions handled by Docling vs legacy
 _DOCLING_EXTENSIONS = {".pdf", ".docx", ".pptx", ".html"}
-_LEGACY_EXTENSIONS = {".txt", ".md"}
+_LEGACY_EXTENSIONS = {".txt", ".md", ".doc"}
 
 
 class DoclingDocumentParser(BaseDocumentParser):

@@ -53,7 +53,7 @@ router = APIRouter(prefix="/documents", tags=["documents"])
 UPLOAD_DIR = settings.BASE_DIR / "uploads"
 UPLOAD_DIR.mkdir(exist_ok=True)
 
-ALLOWED_EXTENSIONS = {".pdf", ".txt", ".md", ".docx", ".pptx"}
+ALLOWED_EXTENSIONS = {".pdf", ".txt", ".md", ".doc", ".docx", ".pptx"}
 MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB
 
 

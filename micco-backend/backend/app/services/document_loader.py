@@ -77,11 +77,70 @@ def load_markdown_file(file_path: Path) -> LoadedDocument:
     )
 
 
+def load_doc_file(file_path: Path) -> LoadedDocument:
+    """Load a legacy .doc (Word 97-2003 OLE2 binary) file and extract text.
+
+    Uses olefile to read the WordDocument stream and extracts text via
+    UTF-16LE decoding (the standard encoding for Word binary format).
+    """
+    try:
+        import olefile
+        import re
+        import struct
+
+        with olefile.OleFileIO(str(file_path)) as ole:
+            if not ole.exists("WordDocument"):
+                raise ValueError("WordDocument stream not found — invalid .doc file")
+
+            stream = ole.openstream("WordDocument").read()
+
+            # FIB offsets: fcMin at 0x18 (text start), ccpText at 0x1C (char count)
+            fc_min = struct.unpack_from("<I", stream, 0x18)[0]
+            ccp_text = struct.unpack_from("<I", stream, 0x1C)[0]
+
+            if ccp_text == 0 or fc_min >= len(stream):
+                # Fallback: scan entire stream for unicode text
+                raw = stream
+            else:
+                raw = stream[fc_min: fc_min + ccp_text * 2]
+
+            text = raw.decode("utf-16-le", errors="ignore")
+
+            # Remove binary/control characters but keep newlines and tabs
+            text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", " ", text)
+            text = re.sub(r" {2,}", " ", text)
+            text = text.strip()
+
+            if len(text) < 20:
+                raise ValueError("Extracted text too short — file may be corrupted or encrypted")
+
+            # Estimate page count from FIB cpnBtePap (rough: 1 page per 3000 chars)
+            page_count = max(1, len(text) // 3000)
+
+            logger.info(
+                f"Loaded .doc {file_path.name}: {len(text)} chars, ~{page_count} pages"
+            )
+            return LoadedDocument(
+                content=text,
+                source=str(file_path),
+                file_type="doc",
+                page_count=page_count,
+            )
+
+    except ImportError:
+        raise ValueError(
+            "olefile is required to read .doc files. Run: pip install olefile"
+        )
+    except Exception as e:
+        logger.error(f"Error loading .doc {file_path}: {e}")
+        raise ValueError(f"Failed to load .doc file: {e}")
+
+
 def load_document(file_path: str | Path) -> LoadedDocument:
     """
     Load a document based on its file type.
 
-    Supported formats: .txt, .pdf, .md
+    Supported formats: .txt, .pdf, .md, .doc
 
     Args:
         file_path: Path to the document file
@@ -103,6 +162,7 @@ def load_document(file_path: str | Path) -> LoadedDocument:
         ".txt": load_txt_file,
         ".pdf": load_pdf_file,
         ".md": load_markdown_file,
+        ".doc": load_doc_file,
     }
 
     loader = loaders.get(suffix)
@@ -114,4 +174,4 @@ def load_document(file_path: str | Path) -> LoadedDocument:
 
 def get_supported_extensions() -> list[str]:
     """Return list of supported file extensions."""
-    return [".txt", ".pdf", ".md"]
+    return [".txt", ".pdf", ".md", ".doc"]

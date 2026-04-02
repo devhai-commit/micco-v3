@@ -69,6 +69,41 @@ def _generate_citation_id(existing: set[str]) -> str:
 # ---------------------------------------------------------------------------
 
 # Gemini native function calling
+def _get_openai_tool() -> dict:
+    """OpenAI native function calling tool definition."""
+    return {
+        "type": "function",
+        "function": {
+            "name": "search_documents",
+            "description": (
+                "Search the knowledge base for relevant document sections. "
+                "Use this tool when the user asks about document content, data, or facts. "
+                "IMPORTANT: Rewrite the user's question as a detailed, specific search query "
+                "to get better retrieval results. "
+                "Do NOT use this tool for greetings, chitchat, or non-document questions."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": (
+                            "A rewritten, detailed search query based on the user's question. "
+                            "Examples: 'revenue?' → 'total revenue figures and financial performance metrics'. "
+                            "'AI là gì?' → 'định nghĩa trí tuệ nhân tạo, lịch sử và ứng dụng'"
+                        ),
+                    },
+                    "top_k": {
+                        "type": "integer",
+                        "description": "Number of relevant chunks to retrieve (default: 5, max: 10)",
+                    },
+                },
+                "required": ["query"],
+            },
+        },
+    }
+
+
 def _get_gemini_tool():
     """Lazily create Gemini Tool to avoid import at module level."""
     from google.genai import types
@@ -412,6 +447,7 @@ async def agent_chat_stream(
     provider = get_llm_provider()
     provider_name = settings.LLM_PROVIDER.lower()
     is_gemini = provider_name == "gemini"
+    is_openai = provider_name == "openai"
 
     existing_ids: set[str] = set()
     all_sources: list[ChatSourceChunk] = []
@@ -488,6 +524,10 @@ async def agent_chat_stream(
         tools = [_get_gemini_tool()]
         # Reinforce tool-calling obligation in system prompt for Gemini
         effective_system_prompt = system_prompt + GEMINI_TOOL_SYSTEM
+    elif is_openai:
+        tools = [_get_openai_tool()]
+        # Same tool-calling reinforcement as Gemini (native function calling)
+        effective_system_prompt = system_prompt + GEMINI_TOOL_SYSTEM
     else:
         # Ollama: append mandatory tool prompt to system prompt
         effective_system_prompt = system_prompt + "\n\n" + OLLAMA_TOOL_SYSTEM
@@ -514,7 +554,7 @@ async def agent_chat_stream(
             max_tokens=settings.LLM_MAX_OUTPUT_TOKENS,
             system_prompt=effective_system_prompt,
             think=enable_thinking,
-            tools=tools if is_gemini else None,
+            tools=tools if (is_gemini or is_openai) else None,
         ):
             if chunk.type == "thinking":
                 thinking_text += chunk.text
@@ -649,6 +689,34 @@ async def agent_chat_stream(
 
                     # Remove tool-calling instructions since search is done;
                     # keep tools so thinking + tool awareness still works.
+                    effective_system_prompt = system_prompt
+                elif is_openai:
+                    # OpenAI native function calling — mirrors Gemini pattern:
+                    # assistant message with tool_calls + tool result message.
+                    tool_call_id = fc.get("id") or f"call_{query[:8].replace(' ', '_')}"
+                    messages.append(LLMMessage(
+                        role="assistant",
+                        content=None,
+                        tool_calls=[{
+                            "id": tool_call_id,
+                            "type": "function",
+                            "function": {
+                                "name": fc_name,
+                                "arguments": json.dumps(fc_args, ensure_ascii=False),
+                            },
+                        }],
+                    ))
+                    messages.append(LLMMessage(
+                        role="tool",
+                        content=tool_result_content,
+                        tool_call_id=tool_call_id,
+                    ))
+                    if img_parts:
+                        messages.append(LLMMessage(
+                            role="user",
+                            content="Referenced document images:",
+                            images=user_images,
+                        ))
                     effective_system_prompt = system_prompt
                 else:
                     # Ollama: add text-based assistant + user messages
@@ -804,6 +872,7 @@ async def chat_stream_endpoint(
 
     # Determine search mode
     from app.core.security import get_current_user
+    current_user = None
     try:
         current_user = await get_current_user(fastapi_req, db)
         is_admin = current_user.role == "Admin"
@@ -826,7 +895,7 @@ async def chat_stream_endpoint(
         from app.models.chat_message import ChatMessage as ChatMessageModel
         user_row = ChatMessageModel(
             workspace_id=workspace_id,
-            user_id=current_user.id,
+            user_id=current_user.id if current_user else None,
             message_id=str(uuid.uuid4()),
             role="user",
             content=request.message,
@@ -958,7 +1027,7 @@ async def chat_stream_endpoint(
                     from app.models.chat_message import ChatMessage as ChatMessageModel
                     assistant_row = ChatMessageModel(
                         workspace_id=workspace_id,
-                        user_id=current_user.id,
+                        user_id=current_user.id if current_user else None,
                         message_id=str(uuid.uuid4()),
                         role="assistant",
                         content=final_answer,

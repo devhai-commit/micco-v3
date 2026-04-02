@@ -862,11 +862,11 @@ export default function ChatAssistant() {
                 {/* ─── Header ─── */}
                 <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 py-3 flex items-center justify-between flex-shrink-0 rounded-t-2xl">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-md flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-800 flex items-center justify-center shadow-md flex-shrink-0">
                         <Sparkles className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                        <h1 className="text-base font-bold text-gray-900 dark:text-white">Micco AI Chat</h1>
+                        <h1 className="text-base font-bold text-green-900 dark:text-white">MT-AI Chat</h1>
                     </div>
                 </div>
 

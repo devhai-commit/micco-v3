@@ -132,12 +132,12 @@ export default function DashboardLayout() {
             <div className={`px-4 py-4 flex items-center justify-between border-b border-gray-100 dark:border-gray-800 mb-2`}>
                 <Link to="/dashboard" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                     <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-1.5 shadow-sm border border-gray-100 dark:border-gray-800">
-                        <img src="/logo-tkv.png" alt="TKV" className="w-full h-full object-contain" />
+                        <img src="/Logo_MTA.png" alt="TKV" className="w-full h-full object-contain" />
                     </div>
                     {sidebarOpen && (
                         <div className="flex flex-col">
-                            <span className="text-lg font-extrabold text-gray-900 dark:text-white leading-tight">
-                                TKV
+                            <span className="text-lg font-extrabold text-green-800 dark:text-white leading-tight">
+                                MT-AI
                             </span>
                             <span className="text-[11px] font-bold text-primary-600 dark:text-primary-400">
                                 nền tảng tri thức

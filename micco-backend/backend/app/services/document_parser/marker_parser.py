@@ -30,7 +30,7 @@ from app.services.models.parsed_document import (
 logger = logging.getLogger(__name__)
 
 _MARKER_EXTENSIONS = {".pdf", ".docx", ".pptx", ".xlsx", ".html", ".epub"}
-_LEGACY_EXTENSIONS = {".txt", ".md"}
+_LEGACY_EXTENSIONS = {".txt", ".md", ".doc"}
 
 # Default page separator used by Marker when paginate_output=True
 _PAGE_SEPARATOR = "-" * 48

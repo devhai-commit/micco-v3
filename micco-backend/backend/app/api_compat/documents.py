@@ -44,7 +44,7 @@ THUMBNAIL_DIR = UPLOAD_DIR / "thumbnails"
 THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
 
 MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB
-ALLOWED_EXTENSIONS = {".pdf", ".txt", ".md", ".docx", ".pptx", ".xlsx", ".png", ".jpg", ".jpeg"}
+ALLOWED_EXTENSIONS = {".pdf", ".txt", ".md", ".doc", ".docx", ".pptx", ".xlsx", ".png", ".jpg", ".jpeg"}
 
 
 # ─── Access Control Helpers ────────────────────────────────────────

@@ -49,7 +49,7 @@ export const testimonials = [
         name: 'Jennifer Walsh',
         role: 'Phó giám đốc vận hành',
         company: 'TechForward Inc.',
-        quote: 'Micco AI đã thay đổi hoàn toàn cách chúng tôi quản lý tài liệu tuân thủ. Trợ lý AI tìm câu trả lời chỉ trong vài giây, thay vì hàng giờ tìm thủ công.',
+        quote: 'MT-AI đã thay đổi hoàn toàn cách chúng tôi quản lý tài liệu tuân thủ. Trợ lý AI tìm câu trả lời chỉ trong vài giây, thay vì hàng giờ tìm thủ công.',
         rating: 5,
     },
     {
@@ -63,7 +63,7 @@ export const testimonials = [
         name: 'Rachel Torres',
         role: 'Giám đốc công nghệ',
         company: 'ScaleUp Solutions',
-        quote: 'Chúng tôi đã đánh giá 12 nền tảng quản lý tài liệu. Micco AI là lựa chọn vượt trội — bảo mật cấp doanh nghiệp nhưng vẫn đủ đơn giản để cả đội sử dụng hằng ngày.',
+        quote: 'Chúng tôi đã đánh giá 12 nền tảng quản lý tài liệu. MT-AI là lựa chọn vượt trội — bảo mật cấp doanh nghiệp nhưng vẫn đủ đơn giản để cả đội sử dụng hằng ngày.',
         rating: 5,
     },
 ];

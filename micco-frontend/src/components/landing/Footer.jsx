@@ -66,7 +66,7 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <Link to="/" className="flex items-center gap-4 mb-4">
                             <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm border border-gray-100">
-                                <img src="/logo-tkv.png" alt="TKV Logo" className="w-full h-full object-contain" />
+                                <img src="/Logo_MTA.png" alt="TKV Logo" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-2xl font-extrabold text-white leading-tight">

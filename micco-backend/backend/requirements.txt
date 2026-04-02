@@ -20,6 +20,7 @@ cohere>=5.0.0
 
 # Document parsing (Docling — default parser)
 docling>=2.0.0
+olefile>=0.46
 
 # Text processing
 langchain-text-splitters>=0.0.1

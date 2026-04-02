@@ -22,7 +22,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-4">
                         <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2 shadow-sm border border-gray-100 dark:border-gray-800">
-                            <img src="/logo-tkv.png" alt="TKV Logo" className="w-full h-full object-contain" />
+                            <img src="/Logo_MTA.png" alt="TKV Logo" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-2xl font-extrabold text-gray-900 dark:text-white leading-tight">
